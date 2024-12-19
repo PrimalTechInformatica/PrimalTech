@@ -28,7 +28,7 @@ header {
 }
 
 #contatobg {
-    max-width: 10%;
+    width: 30%;
     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     transition: box-shadow 0.3s ease;
@@ -204,7 +204,7 @@ form button {
 
 form button:hover {
     background-color: #460069;
-    transform: scale(1.1);
+    transition: 0.3s;   
 }
 
 .icones {

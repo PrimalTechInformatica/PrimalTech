@@ -25,13 +25,21 @@
             emailjs.sendForm('service_ov4318e', 'template_3qc28p9', this)
                 .then(() => {
                     console.log('Mensagem enviada com sucesso!');
-                    alert('Mensagem enviada com sucesso!');
+                    showConfirmation();
                     document.getElementById('contato-form').reset();
                 }, (error) => {
                     console.log('Falha ao enviar...', error);
                     alert('Erro ao enviar a mensagem. Tente novamente.');
                 });
         });
+    }
+
+    function showConfirmation() {
+        document.getElementById('confirmation-modal').classList.add('show');
+    }
+
+    function closeModal() {
+        document.getElementById('confirmation-modal').classList.remove('show');
     }
 </script>
 
@@ -114,6 +122,14 @@
     <footer>
         <p>&copy; 2024 PRIMALTECH. Todos os direitos reservados.</p>
     </footer>
+
+    <div id="confirmation-modal" class="confirmation-modal">
+        <div class="modal-content">
+            <img src="PNG/Carta.png" alt="Imagem de confirmação">
+            <h3>Mensagem enviada!</h3>
+            <button onclick="closeModal()">Ok</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

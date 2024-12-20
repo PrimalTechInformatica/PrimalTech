@@ -29,10 +29,23 @@ header {
 
 #contatobg {
     width: 30%;
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
     border-radius: 50%;
-    transition: box-shadow 0.3s ease;
+    animation: neonPulse 1.5s ease-in-out infinite;
 }
+
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(82, 0, 124, 1);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
+    }
+}
+
 
 .logo img {
     max-width: 200px;
@@ -119,9 +132,12 @@ section h2 {
 }
 
 .texto-sobre {
+    
     width: 50%;
     text-align: left;
 }
+
+
 
 .imagem-sobre img {
     max-width: 100%;
@@ -151,7 +167,22 @@ section h2 {
     background-color: #52007C;
     transform: translateY(-10px);
     cursor: pointer;
+    box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
+    animation: neonPulse 1.5s ease-in-out infinite;
 }
+
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(82, 0, 124, 1);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
+    }
+}
+
 
 .servico h3 {
     font-size: 24px;
@@ -204,8 +235,11 @@ form button {
 
 form button:hover {
     background-color: #460069;
-    transition: 0.3s;   
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
+    animation: neonPulse 1.5s ease-in-out infinite;
 }
+
 
 .icones {
     max-width: 100px;
@@ -244,6 +278,76 @@ form button:hover {
 .localizacao p {
     font-size: 18px;
 }
+
+.confirmation-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.confirmation-modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #111;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    animation: lightPulse 1.5s ease-in-out infinite;
+    width: 60%; /* Reduz a largura da caixa */
+    max-width: 400px; /* Limita a largura máxima */
+    box-sizing: border-box;
+}
+
+.modal-content img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.modal-content h3 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.modal-content button {
+    padding: 10px 30px;
+    background-color: #52007C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #460069;
+    transition: 0.3s;
+}
+
+@keyframes lightPulse {
+    0% {
+        box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(82, 0, 124, 1);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .menu {

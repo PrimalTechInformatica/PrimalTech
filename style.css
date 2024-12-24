@@ -46,7 +46,6 @@ header {
     }
 }
 
-
 .logo img {
     max-width: 200px;
     transition: all 0.3s ease;
@@ -92,7 +91,7 @@ header {
     font-size: 30px;
     color: white;
     position: absolute;
-    top: 5px;  /* Subi o botão um pouco mais */
+    top: 5px;
     right: 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -132,12 +131,9 @@ section h2 {
 }
 
 .texto-sobre {
-    
     width: 50%;
     text-align: left;
 }
-
-
 
 .imagem-sobre img {
     max-width: 100%;
@@ -171,23 +167,19 @@ section h2 {
     animation: neonPulse 1.5s ease-in-out infinite;
 }
 
-@keyframes neonPulse {
-    0% {
-        box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
-    }
-    50% {
-        box-shadow: 0 0 30px rgba(82, 0, 124, 1);
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
-    }
-}
-
-
 .servico h3 {
     font-size: 24px;
     margin-bottom: 15px;
     color: white;
+}
+
+.servico.promocao {
+    width: 280px;
+    background-color: #C1002D;
+    padding: 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 auto;
 }
 
 footer {
@@ -239,7 +231,6 @@ form button:hover {
     box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
     animation: neonPulse 1.5s ease-in-out infinite;
 }
-
 
 .icones {
     max-width: 100px;
@@ -306,8 +297,8 @@ form button:hover {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     animation: lightPulse 1.5s ease-in-out infinite;
-    width: 60%; /* Reduz a largura da caixa */
-    max-width: 400px; /* Limita a largura máxima */
+    width: 60%;
+    max-width: 400px;
     box-sizing: border-box;
 }
 
@@ -335,6 +326,15 @@ form button:hover {
     transition: 0.3s;
 }
 
+.precosservicos {
+    color: white;
+    background-color: #20b901;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 @keyframes lightPulse {
     0% {
         box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
@@ -346,8 +346,6 @@ form button:hover {
         box-shadow: 0 0 20px rgba(82, 0, 124, 0.7);
     }
 }
-
-
 
 @media (max-width: 768px) {
     .menu {

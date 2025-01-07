@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrimalTech</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="PNG/Corpointeirosembg.png" type="image/x-icon">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimalTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="PNG/Corpointeirosembg.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script type="text/javascript">
-(function() {
-emailjs.init({
-publicKey: "TaR4VZeMck7N_MEbg",
-});
-})();
+    (function() {
+        emailjs.init({
+            publicKey: "TaR4VZeMck7N_MEbg",
+        });
+    })();
 </script>
 
 <script type="text/javascript">
-window.onload = function() {
-document.getElementById('contato-form').addEventListener('submit', function(event) {
-event.preventDefault();
+    window.onload = function() {
+        document.getElementById('contato-form').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-emailjs.sendForm('service_ov4318e', 'template_3qc28p9', this)
-.then(() => {
-console.log('Mensagem enviada com sucesso!');
-                    alert('Mensagem enviada com sucesso!');
+            emailjs.sendForm('service_ov4318e', 'template_3qc28p9', this)
+                .then(() => {
+                    console.log('Mensagem enviada com sucesso!');
                     showConfirmation();
-document.getElementById('contato-form').reset();
-}, (error) => {
-console.log('Falha ao enviar...', error);
-alert('Erro ao enviar a mensagem. Tente novamente.');
-});
-});
-}
+                    document.getElementById('contato-form').reset();
+                }, (error) => {
+                    console.log('Falha ao enviar...', error);
+                    alert('Erro ao enviar a mensagem. Tente novamente.');
+                });
+        });
+    }
 
     function showConfirmation() {
         document.getElementById('confirmation-modal').classList.add('show');
@@ -46,83 +45,83 @@ alert('Erro ao enviar a mensagem. Tente novamente.');
 
 </head>
 <body>
-<header>
-<div class="logo">
-<img src="PNG/nome.png" alt="Logo PrimalTech">
-</div>
-<nav class="nav-bar">
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
-<ul class="menu">
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#servicos">Serviços</a></li>
-<li><a href="#contato">Contato</a></li>
-</ul>
-</nav>
-</header>
+    <header>
+        <div class="logo">
+            <img src="PNG/nome.png" alt="Logo PrimalTech">
+        </div>
+        <nav class="nav-bar">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section id="sobre">
-<div class="sobre-conteudo">
-<div class="texto-sobre">
-<h2>Sobre Nós</h2>
-<p>Oferecemos serviços especializados de montagem, limpeza e formatação de computadores. Garantimos que seu equipamento terá o melhor desempenho, com foco na eficiência e segurança.</p>
-</div>
-<div class="imagem-sobre">
-<img src="PNG/Corpointeirosembg.png" alt="Imagem sobre nós">
-</div>
-</div>
-</section>
+    <section id="sobre">
+        <div class="sobre-conteudo">
+            <div class="texto-sobre">
+                <h2>Sobre Nós</h2>
+                <p>Oferecemos serviços especializados de montagem, limpeza e formatação de computadores. Garantimos que seu equipamento terá o melhor desempenho, com foco na eficiência e segurança.</p>
+            </div>
+            <div class="imagem-sobre">
+                <img src="PNG/Corpointeirosembg.png" alt="Imagem sobre nós">
+            </div>
+        </div>
+    </section>
 
-<section id="servicos" class="aparecer">
-<h2>Nossos Serviços</h2>
-<div class="servicos-lista">
-<div class="servico" onclick="openWhatsApp('Montagem de PC')">
-<h3>Montagem de PC</h3>
-<img class="icones" src="PNG/MontagemBG.png" alt="Montagem de PC">
-<p>Realizamos a montagem do seu computador, basta já possuir as peças!</p>
-</div>
-<div class="servico" onclick="openWhatsApp('Limpeza de PC')">
-<h3>Limpeza de PC</h3>
-<img class="icones" src="PNG/LimpezaBG.png" alt="Limpeza de PC">
-<p>Realizamos a limpeza interna e externa do seu computador, eliminando poeira e melhorando o desempenho.</p>
-</div>
-<div class="servico" onclick="openWhatsApp('Formatação de PC')">
-<h3>Formatação de PC</h3>
-<img class="icones" src="PNG/FormataçaoBG.png" alt="Formatação de PC">
-<p>Formatamos seu computador, instalando o sistema operacional e otimizando seu uso para melhor desempenho.</p>
-</div>
-<div class="servico" onclick="openWhatsApp('Monte seu PC')">
-<h3>Monte seu PC</h3>
-<img class="icones" src="PNG/MontagemGuiadaBG.png" alt="Monte seu PC">
-<p>Ajudamos você a montar seu computador! Informe as peças e nós compraremos. Seu computador chegará montado em sua casa.</p>
-</div>
-</div>
-</section>
+    <section id="servicos" class="aparecer">
+        <h2>Nossos Serviços</h2>
+        <div class="servicos-lista">
+            <div class="servico" onclick="openWhatsApp('Montagem de PC')">
+                <h3>Montagem de PC</h3>
+                <img class="icones" src="PNG/MontagemBG.png" alt="Montagem de PC">
+                <p>Realizamos a montagem do seu computador, basta já possuir as peças!<br><br><i class="precosservicos">R$ 100,00</i></p>
+            </div>
+            <div class="servico" onclick="openWhatsApp('Limpeza de PC')">
+                <h3>Limpeza de PC</h3>
+                <img class="icones" src="PNG/LimpezaBG.png" alt="Limpeza de PC">
+                <p>Realizamos a limpeza interna e externa do seu computador, eliminando poeira e melhorando o desempenho.<br><br><i class="precosservicos">R$ 150,00</i></p>
+            </div>
+            <div class="servico" onclick="openWhatsApp('Formatação de PC')">
+                <h3>Formatação de PC</h3>
+                <img class="icones" src="PNG/FormataçaoBG.png" alt="Formatação de PC">
+                <p>Formatamos seu computador, instalando o sistema operacional e otimizando seu uso para melhor desempenho. <br><br><i class="precosservicos">R$ 50,00</i></p>
+            </div>
+            <div class="servico" onclick="openWhatsApp('Monte seu PC')">
+                <h3>Monte seu PC</h3>
+                <img class="icones" src="PNG/MontagemGuiadaBG.png" alt="Monte seu PC">
+                <p>Ajudamos você a montar seu computador! Informe as peças e nós compraremos. Seu computador chegará montado em sua casa. <br><br><i class="precosservicos">Faça seu orçamento!</i></p>
+            </div>
+        </div>
+    </section>
 
-<section id="contato" class="aparecer">
-<h2>Contato</h2>
-<div class="contato-conteudo">
-<img id="contatobg" src="PNG/ContatoBG.png" alt="">
-<form id="contato-form">
-<label for="nome">Seu nome:</label>
-<input type="text" id="nome" name="nome" required>
-<label for="email">Seu e-mail:</label>
-<input type="email" id="email" name="email" required>
-<label for="mensagem">Mensagem:</label>
-<textarea id="mensagem" name="mensagem" required></textarea>
-<button type="submit">Enviar</button>
-</form>
-</div>
-</section>
+    <section id="contato" class="aparecer">
+        <h2>Contato</h2>
+        <div class="contato-conteudo">
+            <img id="contatobg" src="PNG/ContatoBG.png" alt="">
+            <form id="contato-form">
+                <label for="nome">Seu nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Seu e-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
 
-<div class="localizacao">
-<h3>Localização</h3>
-<p>Rua Henrique Simões, 74</p>
-<p>CEP: 36081-480</p>
-</div>
+    <div class="localizacao">
+        <h3>Localização</h3>
+        <p>Rua Henrique Simões, 74</p>
+        <p>CEP: 36081-480</p>
+    </div>
 
-<footer>
-<p>&copy; 2024 PRIMALTECH. Todos os direitos reservados.</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 PRIMALTECH. Todos os direitos reservados.</p>
+    </footer>
 
     <div id="confirmation-modal" class="confirmation-modal">
         <div class="modal-content">
@@ -132,6 +131,6 @@ alert('Erro ao enviar a mensagem. Tente novamente.');
         </div>
     </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
